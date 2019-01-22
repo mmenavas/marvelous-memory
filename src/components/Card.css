@@ -1,0 +1,10 @@
+.card {
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    margin:10px;
+    padding: 10px;
+}
+.card--on {
+    background-color: darkslategrey
+}

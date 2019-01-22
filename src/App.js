@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './components/Card';
 import './App.css';
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
   
   componentDidMount() {
 
-    let cards = this.createCards(3);
+    let cards = this.createCards(8);
     console.log(cards);
     let shuffleCards = this.shuffleCards(cards);
     console.log(shuffleCards);
@@ -31,12 +32,13 @@ class App extends Component {
     let cards = [];
     let count = 0; 
 
-    while (count < uniqueCards) {
+    while (count < uniqueCards * 2) {
       count++;
-      cards.push(count);
+      cards.push({
+        value: count,
+        isOn: false
+      });
     }
-
-    cards = cards.concat(cards)
 
     return cards;
   }
@@ -70,13 +72,30 @@ class App extends Component {
     return shuffledCards;
   }
 
+  handleCardClick(index) {
+    console.log(index);
+    let cards = [...this.state.cards];
+    cards[index].isOn = true;
+    
+    this.setState({
+      cards: cards
+    })
+
+  }
+
   render() {
     return (
       <div className="memory-game">
-        <ul>
+        <ul className="items">
           {
-            this.state.cards.map((value, index) =>
-              <li key={index} className="card">{value}</li>
+            this.state.cards.map((card, index) =>
+              <li key={index} className="item">
+                <Card
+                  value={card.value}
+                  isOn={card.isOn}
+                  reveal={e => this.handleCardClick(index)}
+                />
+              </li>
             )
           } 
         </ul>
