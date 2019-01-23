@@ -12,3 +12,7 @@
     width: 200px;
     /* height:400px; */
 }
+.status-bar {
+    text-align: center;
+    font-size: 1.5rem;
+}

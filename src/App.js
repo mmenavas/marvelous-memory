@@ -3,11 +3,11 @@ import Card from './components/Card';
 import './App.css';
 
 class App extends Component {
-  statusCodeMessages = {
-    next_card: "Pick another card.",
-    not_a_match: "The cards don't match.",
-    match: "The cards match.",
-    win: "You found all matching cards"
+  statusMessages = {
+    next_card: "Nice! Now pick another card.",
+    not_a_match: "Tough luck! Try again.",
+    match: "Very well! Find the next pair.",
+    win: "Excellent! You found all of the matching cards."
   }
 
   constructor() {
@@ -15,7 +15,8 @@ class App extends Component {
     this.state = {
       cards: [],
       card1: -1,
-      matches: 0
+      matches: 0,
+      message: "Start game by selecting a card."
     }
   }
   
@@ -94,7 +95,9 @@ class App extends Component {
     });
 
     let code = this.play(index);
-    console.log(code);
+    this.setState({
+      message: this.statusMessages[code]
+    });
 
   }
 
@@ -145,6 +148,9 @@ class App extends Component {
   render() {
     return (
       <div className="memory-game">
+        <div className="status-bar">
+          <p>{this.state.message}</p>
+        </div>
         <ul className="items">
           {
             this.state.cards.map((card, index) =>
