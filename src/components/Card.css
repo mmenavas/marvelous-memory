@@ -4,6 +4,7 @@
     text-align: center;
     margin:10px;
     padding: 10px;
+    font-size: 3rem;
 }
 .card--on {
     background-color: darkslategrey

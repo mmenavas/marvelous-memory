@@ -3,20 +3,25 @@ import Card from './components/Card';
 import './App.css';
 
 class App extends Component {
+  statusCodeMessages = {
+    next_card: "Pick another card.",
+    not_a_match: "The cards don't match.",
+    match: "The cards match.",
+    win: "You found all matching cards"
+  }
 
   constructor() {
     super();
     this.state = {
-      cards: []
+      cards: [],
+      card1: -1,
+      matches: 0
     }
   }
   
   componentDidMount() {
-
     let cards = this.createCards(8);
-    console.log(cards);
     let shuffleCards = this.shuffleCards(cards);
-    console.log(shuffleCards);
 
     this.setState({
       cards: shuffleCards
@@ -32,8 +37,12 @@ class App extends Component {
     let cards = [];
     let count = 0; 
 
-    while (count < uniqueCards * 2) {
+    while (count < uniqueCards) {
       count++;
+      cards.push({
+        value: count,
+        isOn: false
+      });
       cards.push({
         value: count,
         isOn: false
@@ -73,14 +82,64 @@ class App extends Component {
   }
 
   handleCardClick(index) {
-    console.log(index);
+    if (this.state.cards[index].isOn) {
+      return false;
+    }
+
     let cards = [...this.state.cards];
     cards[index].isOn = true;
     
     this.setState({
       cards: cards
-    })
+    });
 
+    let code = this.play(index);
+    console.log(code);
+
+  }
+
+  play(index) {
+    // Check if first card was selected.
+    if (this.state.card1 === -1) {
+      this.setState({
+        card1: index
+      })
+
+      return 'next_card';
+    }
+
+    // If first card wasn't selected, then it's safe to assume that the second card was.
+    let cards = [...this.state.cards];
+    let card1 = this.state.card1;
+    let matches = this.state.matches;
+
+    // Check if cards don't match.
+    if (cards[card1].value !== cards[index].value) {
+      setTimeout(() => {
+        cards[card1].isOn = false;
+        cards[index].isOn = false;
+        
+        this.setState({
+          card1: -1,
+          cards: cards
+        }) 
+      }, 1000);
+
+      return 'not_a_match';
+    }
+
+    // Selected cards are a match.
+    this.setState({
+      card1: -1,
+      matches: matches + 1
+    });
+
+    // Check if all matching cards have been found.
+    if ((matches + 1) === (cards.length / 2)) {
+      return 'win';
+    }
+
+    return 'match';
   }
 
   render() {

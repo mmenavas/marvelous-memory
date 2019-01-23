@@ -4,7 +4,7 @@ import './Card.css';
 
 const Card = props => (
   <div className={"card" + (props.isOn ? " card--on" : "")} onClick={() => props.reveal()}>
-    {props.value}
+    {props.isOn ? props.value : "?"}
   </div>
 );
 
