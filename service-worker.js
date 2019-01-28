@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/marvelous-memory/precache-manifest.6abb5e48268cd87b23d9fac4c60eb7ff.js"
+  "/marvelous-memory/precache-manifest.b1b8863f12d4d93e9118aa664842a05a.js"
 );
 
 workbox.clientsClaim();
