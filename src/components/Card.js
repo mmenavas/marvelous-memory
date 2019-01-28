@@ -4,12 +4,16 @@ import './Card.css';
 
 const Card = props => (
   <div className={"card" + (props.isOn ? " card--on" : "")} onClick={() => props.reveal()}>
-    {props.isOn ? props.value : "?"}
+    {props.isOn ? 
+      <img className="card__image" src={props.image} alt="" />
+      :
+      "?"}
   </div>
 );
 
 Card.propTypes = {
-    value: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
     isOn: PropTypes.bool.isRequired,
     reveal: PropTypes.func.isRequired
   }

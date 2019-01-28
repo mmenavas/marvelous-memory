@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import {DelayInput} from 'react-delay-input';
 import Card from './components/Card';
 import './App.css';
 
 class App extends Component {
+  backendUrl = "http://0.0.0.0:5000/find/"
+
   statusMessages = {
-    next_card: "Nice! Now pick another card.",
+    next_card: "Good! Now pick another card.",
     not_a_match: "Tough luck! Try again.",
     match: "Very well! Find the next pair.",
-    win: "Excellent! You found all of the matching cards."
+    win: "Excellent! You found them all.",
+    select_characters: "Choose 3 or more Marvel characters.",
+    first_card: "Select a card.",
   }
 
   constructor() {
@@ -15,49 +20,19 @@ class App extends Component {
     this.state = {
       cards: [],
       card1: -1,
+      lock: false,
       matches: 0,
-      message: "Start game by selecting a card."
+      message: this.statusMessages.select_characters,
+      search_results: [],
+      start_game: false
     }
-  }
-  
-  componentDidMount() {
-    let cards = this.createCards(8);
-    let shuffleCards = this.shuffleCards(cards);
-
-    this.setState({
-      cards: shuffleCards
-    })
   }
 
   /**
-   * Create an array of sorted cards
+   * Rearrange elements in array.
    * 
-   * @return array of card values
+   * @return shuffled array
    */
-  createCards(uniqueCards) {
-    let cards = [];
-    let count = 0; 
-
-    while (count < uniqueCards) {
-      count++;
-      cards.push({
-        value: count,
-        isOn: false
-      });
-      cards.push({
-        value: count,
-        isOn: false
-      });
-    }
-
-    return cards;
-  }
-
-   /**
-    * Rearrange elements in array.
-    * 
-    * @return shuffled array
-    */
   shuffleCards(cards) {
     let shuffledCards = [];
     let randomIndex = 0;
@@ -83,6 +58,10 @@ class App extends Component {
   }
 
   handleCardClick(index) {
+    if (this.state.lock) {
+      return false;
+    }
+
     if (this.state.cards[index].isOn) {
       return false;
     }
@@ -117,14 +96,19 @@ class App extends Component {
     let matches = this.state.matches;
 
     // Check if cards don't match.
-    if (cards[card1].value !== cards[index].value) {
+    if (cards[card1].id !== cards[index].id) {
+      // Lock all cards
+      this.setState({
+        lock: true
+      }) 
       setTimeout(() => {
         cards[card1].isOn = false;
         cards[index].isOn = false;
         
         this.setState({
           card1: -1,
-          cards: cards
+          cards: cards,
+          lock: false 
         }) 
       }, 1000);
 
@@ -145,18 +129,110 @@ class App extends Component {
     return 'match';
   }
 
+  handleSearch(name) {
+    if (name) {
+      const url = this.backendUrl + name;
+      fetch(url)
+        .then(response => {
+          // TODO: Handle failed request.
+          // console.log(response);
+          return response.json()
+        })
+        .then(items => { 
+          this.setState({
+            search_results: items
+          });
+        });
+    }
+    else {
+          this.setState({
+            search_results: []
+          });
+    }
+  }
+
+  addCard(character) {
+    // TODO: Check that character doesn't already exist.
+    // TODO: Don't show add button if character was already chosen.
+    character.isOn = false;
+    character.isClone = false;
+    let clone = {
+      ...character,
+      isClone: true
+    }
+    this.setState({
+      cards: [
+        ...this.state.cards,
+        character,
+        clone
+      ]
+    });
+  }
+
+  removeCard(id) {
+    let cards = this.state.cards.filter(card => card.id !== id) 
+    this.setState({
+      cards: cards
+    });
+  }
+
+  startGame() {
+    let cards = [...this.state.cards];
+    let shuffleCards = this.shuffleCards(cards)
+    this.setState({
+      cards: shuffleCards,
+      start_game: true,
+      message: this.statusMessages.first_card
+    });
+  }
+
   render() {
     return (
       <div className="memory-game">
         <div className="status-bar">
           <p>{this.state.message}</p>
         </div>
-        <ul className="items">
+        <div className={"start-game" + (this.state.cards.length > 5 && !this.state.start_game ? "" : " hide")}>
+          <button onClick={() => this.startGame()}>Start Game</button>
+        </div>
+        <div className={"search" + (!this.state.start_game ? "" : " hide")}>
+          <ul className="chosen-cards">
+            {
+              this.state.cards
+              .filter(result => !result.isClone)
+              .map((result, index) =>
+                <li key={index} className="chosen-cards__item">
+                  <img src={result.thumbnail} alt="" />
+                  <button onClick={() => this.removeCard(result.id)}>Remove</button>
+                </li>
+              )
+            } 
+          </ul>
+          <DelayInput
+            minLength={2}
+            delayTimeout={300}
+            className="search__box"
+            onChange={(event) => this.handleSearch(event.target.value)}
+          />
+          <ul className="search__results">
+            {
+              this.state.search_results.map((result, index) =>
+                <li key={index} className="result">
+                  <img src={result.thumbnail} alt="" />
+                  {result.name}
+                  <button onClick={() => this.addCard(result)}>Add</button>
+                </li>
+              )
+            } 
+          </ul>
+        </div>
+        <ul className={"cards" + (this.state.start_game ? "" : " hide")}>
           {
             this.state.cards.map((card, index) =>
-              <li key={index} className="item">
+              <li key={index} className="card__item">
                 <Card
-                  value={card.value}
+                  id={card.id}
+                  image={card.image}
                   isOn={card.isOn}
                   reveal={e => this.handleCardClick(index)}
                 />

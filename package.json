@@ -2,15 +2,16 @@
   "name": "react-memory-game",
   "version": "1.0",
   "author": {
-    "name" : "Maximo Mena",
-    "email" : "maximo.mena@gmail.com",
-    "url" : "https://github.com/mmenavas"
+    "name": "Maximo Mena",
+    "email": "maximo.mena@gmail.com",
+    "url": "https://github.com/mmenavas"
   },
   "homepage": "https://mmenavas.github.io/react-memory-game",
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
+    "react-delay-input": "^4.0.4",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },

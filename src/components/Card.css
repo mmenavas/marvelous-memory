@@ -1,11 +1,17 @@
 .card {
-    background-color: #999;
+    background-color: darkslategrey;
     color: #fff;
     text-align: center;
-    margin:10px;
-    padding: 10px;
-    font-size: 3rem;
+    margin: 5px;
+    padding: 5px;
+    line-height: 200px;
+    font-size: 10rem;
+    height: 180px;
+    width: 180px;
 }
 .card--on {
-    background-color: darkslategrey
+    background-color: #eee;
+}
+.card__image {
+    display: block;
 }
