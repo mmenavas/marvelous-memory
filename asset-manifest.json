@@ -1,13 +1,13 @@
 {
-  "main.css": "/react-memory-game/static/css/main.c30eca21.chunk.css",
-  "main.js": "/react-memory-game/static/js/main.8889545f.chunk.js",
-  "main.js.map": "/react-memory-game/static/js/main.8889545f.chunk.js.map",
-  "static/js/1.32a950d2.chunk.js": "/react-memory-game/static/js/1.32a950d2.chunk.js",
-  "static/js/1.32a950d2.chunk.js.map": "/react-memory-game/static/js/1.32a950d2.chunk.js.map",
-  "runtime~main.js": "/react-memory-game/static/js/runtime~main.efc8a0be.js",
-  "runtime~main.js.map": "/react-memory-game/static/js/runtime~main.efc8a0be.js.map",
-  "static/css/main.c30eca21.chunk.css.map": "/react-memory-game/static/css/main.c30eca21.chunk.css.map",
-  "index.html": "/react-memory-game/index.html",
-  "precache-manifest.6b5a5e36376e1ceac0a8a51dd8948985.js": "/react-memory-game/precache-manifest.6b5a5e36376e1ceac0a8a51dd8948985.js",
-  "service-worker.js": "/react-memory-game/service-worker.js"
+  "main.css": "/marvelous-memory/static/css/main.c30eca21.chunk.css",
+  "main.js": "/marvelous-memory/static/js/main.8889545f.chunk.js",
+  "main.js.map": "/marvelous-memory/static/js/main.8889545f.chunk.js.map",
+  "static/js/1.32a950d2.chunk.js": "/marvelous-memory/static/js/1.32a950d2.chunk.js",
+  "static/js/1.32a950d2.chunk.js.map": "/marvelous-memory/static/js/1.32a950d2.chunk.js.map",
+  "runtime~main.js": "/marvelous-memory/static/js/runtime~main.776b4dfb.js",
+  "runtime~main.js.map": "/marvelous-memory/static/js/runtime~main.776b4dfb.js.map",
+  "static/css/main.c30eca21.chunk.css.map": "/marvelous-memory/static/css/main.c30eca21.chunk.css.map",
+  "index.html": "/marvelous-memory/index.html",
+  "precache-manifest.6abb5e48268cd87b23d9fac4c60eb7ff.js": "/marvelous-memory/precache-manifest.6abb5e48268cd87b23d9fac4c60eb7ff.js",
+  "service-worker.js": "/marvelous-memory/service-worker.js"
 }
