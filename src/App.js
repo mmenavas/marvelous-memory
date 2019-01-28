@@ -240,6 +240,9 @@ class App extends Component {
             )
           } 
         </ul>
+        <div className="attribution">
+          <p>Data provided by <a href="http://marvel.com" title="Go to Marvel's website">Marvel</a>. © 2019 Marvel</p>
+        </div>
       </div>
     );
   }

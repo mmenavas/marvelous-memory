@@ -1,12 +1,12 @@
 {
-  "name": "react-memory-game",
+  "name": "marvelous-memory",
   "version": "1.0",
   "author": {
     "name": "Maximo Mena",
     "email": "maximo.mena@gmail.com",
     "url": "https://github.com/mmenavas"
   },
-  "homepage": "https://mmenavas.github.io/react-memory-game",
+  "homepage": "https://mmenavas.github.io/marvelous-memory",
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
