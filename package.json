@@ -9,6 +9,7 @@
   "homepage": "https://mmenavas.github.io/marvelous-memory",
   "private": true,
   "dependencies": {
+    "@mmenavas/memory-game-react": "^0.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-delay-input": "^4.0.4",
