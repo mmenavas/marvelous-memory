@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { MemoryGameBoard } from '@mmenavas/memory-game-react'
 import { CharacterSearchBar } from './components/CharacterSearchBar';
 import { CharacterList } from './components/CharacterList';
@@ -21,7 +21,12 @@ export default function App() {
       <h1>Marvelous Memory</h1>
       <CharacterSearchBar onResultClick={addCharacter} />
       <CharacterList characters={characters} onRemoveClick={removeCharacter}/>
-      <MemoryGameBoard values={characters.map(character => character.id)} />
+      <MemoryGameBoard
+        values={characters}
+        timeoutDuration={ 1000 }
+        TileNode={(props) => <img src={props.value.image} alt={props.value.name} />}
+        ConcealedTileNode={(props) => <h2>???</h2>}
+      />
     </div>
   )
 
