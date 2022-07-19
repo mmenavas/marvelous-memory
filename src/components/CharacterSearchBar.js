@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {DelayInput} from 'react-delay-input';
+import { DebounceInput } from 'react-debounce-input'
 import { findCharacterByName } from '../services/api';
-import './CharacterSearchBar.css';
 
 export function CharacterSearchBar({ onResultClick }) {
   const [results, setResults] = useState([])
@@ -18,9 +17,9 @@ export function CharacterSearchBar({ onResultClick }) {
 
   return(
     <div className='CharacterSearchBar'>
-      <DelayInput
+      <DebounceInput
         minLength={2}
-        delayTimeout={300}
+        debounceTimeout={300}
         className="CharacterSearchBar__input-field"
         onChange={(event) => handleSearch(event.target.value)}
       />
