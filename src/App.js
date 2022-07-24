@@ -23,23 +23,26 @@ export default function App() {
   }
 
   return (
-    <div className='bg-amber-500 h-screen grid place-items-center'>
+    <div className=''>
       {screen === screens.home && (
-        <div className='w-96'>
-          <h1 className='text-4xl font-semibold text-white p-4'>Marvelous Memory</h1>
-          <p className='text-xl'>Welcome! Build a tile matching game by finding your favorite Marvel Comics characters and adding them to your board.</p>
+        <div className='w-full'>
+          <p className='text-2xl text-slate-900 text-left'>Hey there! Welcome to</p>
+          <h1 className='text-3xl font-semibold text-white mb-2 text-center'>Marvelous Memory</h1>
+          <p className='text-base text-slate-900 text-right mb-4'>I'm glad you're here!</p>
+          <hr className='mb-4'/>
+          <p className='text-base  text-slate-900 max-w-xl'>Here's the deal: You can find your favorite characters from the Marvel Comics Universe&reg; to build a flip-a-tile game so you can exercise your memory skills. Are you up for the challenge?</p>
           <button
-            className='block bg-orange-500 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-full my-4'
+            className='block bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-8 rounded-full my-4'
             onClick={() => setScreen(screens.characterFinder)}
           >Build Board</button>
         </div>
       )}
       {screen === screens.characterFinder && (
         <div>
-          <CharacterSearchBar onResultClick={addCharacter} label='Find a marvel character and ad' />
+          <CharacterSearchBar onResultClick={addCharacter} helpText='Build a memory game board by selecting your favorite MCU characters:' placeholder='Find an MCU character'/>
           <CharacterList characters={characters} onRemoveClick={removeCharacter}/>
           <button
-            className='block bg-orange-500 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-full my-4'
+            className='block bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-8 rounded-full my-4'
             onClick={() => setScreen(screens.memoryGame)}
           >Start Game</button>
         </div>
