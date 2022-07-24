@@ -1,18 +1,16 @@
 import React from 'react'
-import  { XCircleIcon } from '@heroicons/react/solid'
 import  { XIcon } from '@heroicons/react/outline'
-// import  { XIcon } from '@heroicons/react/solid'
-// import  { XCircleIcon } from '@heroicons/react/outline'
 
-export function Character({thumbnail, id, name, onClick, onRemove}) {
+export function Character({character, onClick, onRemove}) {
+  const {id, name, thumbnail, image} = character
 
   return (
     <div className='relative p-2'>
       <img
-        className=''
+        className='rounded border-2 border-slate-200'
         src={thumbnail}
         alt={name}
-        onClick={() => onClick(id)}
+        onClick={() => onClick(character)}
       />
       { onRemove &&
         <button

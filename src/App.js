@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { MemoryGameBoard } from '@mmenavas/memory-game-react'
 import { CharacterSearchBar } from './components/CharacterSearchBar';
 import { CharacterList } from './components/CharacterList';
+import { Character } from './components/Character';
+import { ConcealedCharacter } from './components/ConcealedCharacter';
 
 const screens = {
   home: 1,
@@ -39,8 +41,8 @@ export default function App() {
       )}
       {screen === screens.characterFinder && (
         <div>
-          <CharacterSearchBar onResultClick={addCharacter} helpText='Build a memory game board by selecting your favorite MCU characters:' placeholder='Find an MCU character'/>
-          <CharacterList characters={characters} onRemoveClick={removeCharacter}/>
+          <CharacterSearchBar charactersToHide={characters.map(item => item.id)} onCharacterClick={addCharacter} helpText='Build a memory game board by selecting your favorite MCU characters:' placeholder='Find an MCU character'/>
+          <CharacterList characters={characters} onItemRemoveClick={removeCharacter} label='Your board' />
           <button
             className='block bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-8 rounded-full my-4'
             onClick={() => setScreen(screens.memoryGame)}
@@ -48,12 +50,18 @@ export default function App() {
         </div>
       )}
       {screen === screens.memoryGame && (
-        <MemoryGameBoard
-          values={characters}
-          timeoutDuration={ 1000 }
-          TileNode={(props) => <img src={props.value.image} alt={props.value.name} />}
-          ConcealedTileNode={(props) => <h2>???</h2>}
-        />
+        <div>
+          <MemoryGameBoard
+            values={characters}
+            timeoutDuration={ 1000 }
+            TileNode={(props) => <Character character={props.value}/>}
+            ConcealedTileNode={(props) => <ConcealedCharacter />}
+          />
+          <button
+            className='block bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-8 rounded-full my-4'
+            onClick={() => setScreen(screens.characterFinder)}
+          >Start Over</button>
+        </div>
       )}
     </div>
   )
