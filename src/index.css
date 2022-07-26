@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.MemoryGameBoard__messages {
+  padding: 20px;
+}
+.MemoryGameBoard__tile.revealed,
+.MemoryGameBoard__tile.concealed {
+  border: none;
+}

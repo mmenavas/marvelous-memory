@@ -47,6 +47,10 @@ export default function App() {
             className='block bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-8 rounded-full my-4'
             onClick={() => setScreen(screens.memoryGame)}
           >Start Game</button>
+          <button
+            className='block bg-gray-600 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-full my-4'
+            onClick={() => setScreen(screens.home)}
+          >Go Back</button>
         </div>
       )}
       {screen === screens.memoryGame && (
@@ -58,9 +62,9 @@ export default function App() {
             ConcealedTileNode={(props) => <ConcealedCharacter />}
           />
           <button
-            className='block bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-8 rounded-full my-4'
+            className='block bg-gray-600 hover:bg-gray-800 text-white font-bold py-4 px-8 rounded-full my-4'
             onClick={() => setScreen(screens.characterFinder)}
-          >Start Over</button>
+          >Go Back</button>
         </div>
       )}
     </div>
