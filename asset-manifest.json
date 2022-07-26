@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a3d70d7.css",
-    "main.js": "/static/js/main.b2f4af60.js",
-    "static/js/787.04f99249.chunk.js": "/static/js/787.04f99249.chunk.js",
-    "index.html": "/index.html",
-    "main.4a3d70d7.css.map": "/static/css/main.4a3d70d7.css.map",
-    "main.b2f4af60.js.map": "/static/js/main.b2f4af60.js.map",
-    "787.04f99249.chunk.js.map": "/static/js/787.04f99249.chunk.js.map"
+    "main.css": "/marvelous-memory/static/css/main.4a3d70d7.css",
+    "main.js": "/marvelous-memory/static/js/main.c211c865.js",
+    "static/js/787.04f99249.chunk.js": "/marvelous-memory/static/js/787.04f99249.chunk.js",
+    "index.html": "/marvelous-memory/index.html",
+    "main.4a3d70d7.css.map": "/marvelous-memory/static/css/main.4a3d70d7.css.map",
+    "main.c211c865.js.map": "/marvelous-memory/static/js/main.c211c865.js.map",
+    "787.04f99249.chunk.js.map": "/marvelous-memory/static/js/787.04f99249.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a3d70d7.css",
-    "static/js/main.b2f4af60.js"
+    "static/js/main.c211c865.js"
   ]
 }
