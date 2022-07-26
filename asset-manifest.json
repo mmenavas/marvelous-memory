@@ -1,13 +1,15 @@
 {
-  "main.css": "/marvelous-memory/static/css/main.c30eca21.chunk.css",
-  "main.js": "/marvelous-memory/static/js/main.5ad89d9c.chunk.js",
-  "main.js.map": "/marvelous-memory/static/js/main.5ad89d9c.chunk.js.map",
-  "static/js/1.32a950d2.chunk.js": "/marvelous-memory/static/js/1.32a950d2.chunk.js",
-  "static/js/1.32a950d2.chunk.js.map": "/marvelous-memory/static/js/1.32a950d2.chunk.js.map",
-  "runtime~main.js": "/marvelous-memory/static/js/runtime~main.776b4dfb.js",
-  "runtime~main.js.map": "/marvelous-memory/static/js/runtime~main.776b4dfb.js.map",
-  "static/css/main.c30eca21.chunk.css.map": "/marvelous-memory/static/css/main.c30eca21.chunk.css.map",
-  "index.html": "/marvelous-memory/index.html",
-  "precache-manifest.b1b8863f12d4d93e9118aa664842a05a.js": "/marvelous-memory/precache-manifest.b1b8863f12d4d93e9118aa664842a05a.js",
-  "service-worker.js": "/marvelous-memory/service-worker.js"
+  "files": {
+    "main.css": "/static/css/main.4a3d70d7.css",
+    "main.js": "/static/js/main.b2f4af60.js",
+    "static/js/787.04f99249.chunk.js": "/static/js/787.04f99249.chunk.js",
+    "index.html": "/index.html",
+    "main.4a3d70d7.css.map": "/static/css/main.4a3d70d7.css.map",
+    "main.b2f4af60.js.map": "/static/js/main.b2f4af60.js.map",
+    "787.04f99249.chunk.js.map": "/static/js/787.04f99249.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a3d70d7.css",
+    "static/js/main.b2f4af60.js"
+  ]
 }
