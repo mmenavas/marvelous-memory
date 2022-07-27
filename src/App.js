@@ -25,7 +25,7 @@ export default function App() {
   }
 
   return (
-    <div className='w-full h-full flex justify-center items-center bg-darkBlue p-4'>
+    <div className='absolute min-w-full min-h-full flex justify-center items-center bg-darkBlue p-4'>
       {screen === screens.home && (
         <div className='lg-2/3 xl:w-1/2 2xl:w-1/3'>
           <h1 className='text-6xl font-semibold mb-6 text-center uppercase '>Marvelous Memory</h1>

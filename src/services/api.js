@@ -12,7 +12,7 @@ export async function findCharacterByName(name) {
     data = await response.json()
   }
   catch (e) {
-    console.error(e)
+    throw 'A network error ocurred'
   }
 
   return data
