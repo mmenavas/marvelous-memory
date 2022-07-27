@@ -8,8 +8,7 @@ This project is a browser-based game to challenge your memory skills. It allows 
 - Use of tailwind for quick styling work.
 
 ## Roadmap:
-- Improve logic to detect mistakes (e.g. if I open a new card, and then open a previously revealed card that does not match the new card, that should be counted as a mistake).
-- Add support for language selection.
+- See [GitHub project](https://github.com/users/mmenavas/projects/1).
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
