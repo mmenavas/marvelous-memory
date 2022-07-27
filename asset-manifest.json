@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/marvelous-memory/static/css/main.82515c16.css",
-    "main.js": "/marvelous-memory/static/js/main.566feae1.js",
+    "main.css": "/marvelous-memory/static/css/main.5a3ff575.css",
+    "main.js": "/marvelous-memory/static/js/main.b58df61a.js",
     "static/js/787.04f99249.chunk.js": "/marvelous-memory/static/js/787.04f99249.chunk.js",
     "index.html": "/marvelous-memory/index.html",
-    "main.82515c16.css.map": "/marvelous-memory/static/css/main.82515c16.css.map",
-    "main.566feae1.js.map": "/marvelous-memory/static/js/main.566feae1.js.map",
+    "main.5a3ff575.css.map": "/marvelous-memory/static/css/main.5a3ff575.css.map",
+    "main.b58df61a.js.map": "/marvelous-memory/static/js/main.b58df61a.js.map",
     "787.04f99249.chunk.js.map": "/marvelous-memory/static/js/787.04f99249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82515c16.css",
-    "static/js/main.566feae1.js"
+    "static/css/main.5a3ff575.css",
+    "static/js/main.b58df61a.js"
   ]
 }
