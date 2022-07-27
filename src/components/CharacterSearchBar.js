@@ -24,13 +24,12 @@ export function CharacterSearchBar({ helpText='', placeholder = '', onCharacterC
           minLength={2}
           debounceTimeout={300}
           placeholder={placeholder}
-          className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 px-3 my-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+          className="placeholder:italic placeholder:text-black block bg-white text-black w-full border rounded-md py-2 px-3 my-4 shadow-sm focus:outline-none focus:ring-1"
           onChange={(event) => handleSearch(event.target.value)}
         />
       </label>
       <CharacterList
-        className='mb-10'
-        label='Add characters to your board by clicking on them.'
+        label='Add tiles to your board by clicking on the search results below:'
         characters={characters.filter(item => !charactersToHide.includes(item.id))}
         // characters={characters}
         onItemClick={handleCharacterClick}
