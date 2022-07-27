@@ -5,12 +5,12 @@ export function Character({character, onClick, onRemove}) {
   const {id, name, thumbnail, image} = character
 
   return (
-    <div className='relative p-2'>
+    <div className='relative'>
       <img
-        className='rounded border-2 border-slate-200'
+        className='rounded border-2 border-slate-200 w-24 h-24'
         src={thumbnail}
         alt={name}
-        onClick={() => onClick(character)}
+        onClick={() => onClick ? onClick(character) : null}
       />
       { onRemove &&
         <button

@@ -8,9 +8,8 @@ This project is a browser-based game to challenge your memory skills. It allows 
 - Use of tailwind for quick styling work.
 
 ## Roadmap:
-- Render baord as a grid.
-- Display game stats.
-- Lot's of UI improvements to support various screen sizes. 
+- Improve logic to detect mistakes (e.g. if I open a new card, and then open a previously revealed card that does not match the new card, that should be counted as a mistake).
+- Add support for language selection.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

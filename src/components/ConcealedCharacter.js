@@ -1,6 +1,5 @@
 import React from 'react'
-import { QuestionMarkCircleIcon } from '@heroicons/react/outline'
 
 export function ConcealedCharacter() {
-  return (<div className='w-32'><QuestionMarkCircleIcon /></div>)
+  return (<div className='w-24 text-center h-24 border-2 rounded border-slate-900'>?</div>)
 }

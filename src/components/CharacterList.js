@@ -8,8 +8,8 @@ export function CharacterList({ label = '', characters, onItemClick, onItemRemov
   }
 
   return (
-    <div>
-      { label && (<p className='p-4 text-slate-100'>{label}</p>) }
+    <div className='mb-4'>
+      { label && (<p className='pb-4 text-slate-100'>{label}</p>) }
       <ul className="flex flex-wrap">
         {
           characters.map((character, index) =>

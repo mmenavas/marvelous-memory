@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <base href="%PUBLIC_URL%/">
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -26,12 +27,14 @@
     -->
     <title>Marvelous Memory</title>
     <style>
-      html, body {
+      html, body, #root {
         height: 100%;
+        width: 100%;
         padding: 0;
         margin: 0;
-        background-color: rgb(249, 115, 22, .75);
-        padding:4px;
+        padding: 0;
+        color: #FFF;
+        background-color: rgb(22 57 112);
       }
     </style>
   </head>
