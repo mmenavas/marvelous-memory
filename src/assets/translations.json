@@ -1,0 +1,109 @@
+{
+  "appTranslations": [
+
+  ],
+  "flipATileTranslations": [
+    {
+      "language": "en",
+      "message": "Select your first tile.",
+      "type": "status",
+      "code": "startGame"
+    },
+    {
+      "language": "en",
+      "message": "Select another tile.",
+      "type": "status",
+      "code": "startTurn"
+    },
+    {
+      "language": "en",
+      "message": "Find a matching tile.",
+      "type": "status",
+      "code": "firstTileRevealed"
+    },
+    {
+      "language": "en",
+      "message": "Well done! Select another tile.",
+      "type": "status",
+      "code": "match"
+    },
+    {
+      "language": "en",
+      "message": "No luck! Select another tile.",
+      "type": "status",
+      "code": "notAMatch"
+    },
+    {
+      "language": "en",
+      "message": "Excellent! You found them all.",
+      "type": "status",
+      "code": "allTilesRevealed"
+    },
+    {
+      "language": "en",
+      "message": "You made {mistakesCount} mistakes.",
+      "type": "statux",
+      "code": "mistakes"
+    },
+    {
+      "language": "en",
+      "message": "This match is over! Go back to select new characters and start a new match.",
+      "type": "error",
+      "code": "gameOverError"
+    },
+    {
+      "language": "en",
+      "message": "Select another tile.",
+      "type": "error",
+      "code": "tileAlreadyRevealedError"
+    },
+    {
+      "language": "es",
+      "message": "Selecciona una carta.",
+      "type": "status",
+      "code": "startGame"
+    },
+    {
+      "language": "es",
+      "message": "Selecciona otra carta.",
+      "type": "status",
+      "code": "startTurn"
+    },
+    {
+      "language": "es",
+      "message": "Selecciona otra carta.",
+      "type": "status",
+      "code": "firstTileRevealed"
+    },
+    {
+      "language": "es",
+      "message": "¡Muy bien! Encuentra las cartas que faltan.",
+      "type": "status",
+      "code": "match"
+    },
+    {
+      "language": "es",
+      "message": "¡Que lástima! Inténtalo de nuevo.",
+      "type": "status",
+      "code": "notAMatch"
+    },
+    {
+      "language": "es",
+      "message": "¡Excelente! Encontraste todas los cartas. La partida se acabó.",
+      "type": "status",
+      "code": "allTilesRevealed"
+    },
+    {
+      "language": "es",
+      "message": "Esta partida ya terminó. Regresa a buscar otros personajes y comienza una nueva partida.",
+      "type": "error",
+      "code": "gameOverError"
+    },
+    {
+      "language": "es",
+      "message": "Selecciona otra carta.",
+      "type": "error",
+      "code": "tileAlreadyRevealedError"
+    }
+  ]
+}
