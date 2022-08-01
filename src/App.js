@@ -17,9 +17,13 @@ const supportedLanguages = [
     code: 'en'
   },
   {
-    name: 'Spanish',
+    name: 'Español',
     code: 'es'
-  }
+  },
+  // {
+  //   name: 'Português',
+  //   code: 'pt'
+  // }
 ]
 
 const screens = {
@@ -41,6 +45,9 @@ export default function App() {
   function removeCharacter(id) {
     setCharacters(characters.filter(character => character.id !== id))
   }
+  function getAppTranslation(msgCode) {
+    return appTranslations.findMessage(msgCode, language)
+  }
 
   return (
     <div className='absolute min-w-full min-h-full flex justify-center items-center bg-darkBlue p-4'>
@@ -52,11 +59,11 @@ export default function App() {
             onChange={setLanguage}
           /> 
           <h1 className='text-6xl font-semibold mb-6 text-center uppercase '>Marvelous Memory</h1>
-          <p className='text-xl mb-8 font-serif border p-4'>Find your favorite characters from the <a className='underline' href='https://www.marvel.com/' _target='_blank'>Marvel Comics Universe</a> to build a flip-a-tile game. Are you ready to level up your memory skills?</p>
+          <p className='text-xl mb-8 font-serif border p-4'>{getAppTranslation('appDescription')}</p>
           <button
             className='block w-full bg-blue font-bold py-4 px-8 rounded-full'
             onClick={() => setScreen(screens.characterFinder)}
-          >Build Board</button>
+          >{getAppTranslation('goToCharacterFinder')}</button>
         </div>
       )}
       {screen === screens.characterFinder && (

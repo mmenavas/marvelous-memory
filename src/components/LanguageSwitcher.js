@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 export function LanguageSwitcher({language, languages, onChange}) {
 
   return (
-    <select value={language} onChange={(event) => onChange(event.target.value)}>
-      {languages.map((language, i) => {
-        return <option key={i} value={language.code}>{ language.name }</option>
-      })}
-    </select>
+    <div className='mb-4 text-right'>
+      <select className='p-2 rounded bg-darkGreen border text-lg' value={language} onChange={(event) => onChange(event.target.value)}>
+        {languages.map((language, i) => {
+          return <option key={i} value={language.code}>{ language.name }</option>
+        })}
+      </select>
+    </div>
   )
 
 }

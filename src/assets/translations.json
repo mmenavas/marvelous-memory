@@ -1,6 +1,95 @@
 {
   "appTranslations": [
-
+    {
+      "language": "en",
+      "message": "Find your favorite characters from the Marvel Comics Universe to build a flip-a-tile game. Are you ready to level up your memory skills?",
+      "code": "appDescription"
+    },
+    {
+      "language": "en",
+      "message": "Search for Marvel characters",
+      "code": "goToCharacterFinder"
+    },
+    {
+      "language": "en",
+      "message": "Build a memory game board by selecting your favorite Marvel characters:",
+      "code": "characterFinderLabel"
+    },
+    {
+      "language": "en",
+      "message": "Type the name of a Marvel character (e.g. Hulk)",
+      "code": "characterFinderPlaceholder"
+    },
+    {
+      "language": "en",
+      "message": "Start game",
+      "code": "goToMemoryGame"
+    },
+    {
+      "language": "en",
+      "message": "Go Back",
+      "code": "goBack"
+    },
+    {
+      "language": "en",
+      "message": "No results were found. Try typing a different name (e.g. spider-man).",
+      "code": "characterFinderNoResults"
+    },
+    {
+      "language": "en",
+      "message": "Add tiles to your board by clicking on the search results below:",
+      "code": "selectTiles"
+    },
+    {
+      "language": "en",
+      "message": "Your board has {characterCount} characters so far:",
+      "code": "yourBoard"
+    },
+    {
+      "language": "es",
+      "message": "Encuentre a sus personajes favoritos de Marvel Comics y arme un juego de memoria. ¿Listo para el desafio?",
+      "code": "appDescription"
+    },
+    {
+      "language": "es",
+      "message": "Buscar personajes",
+      "code": "goToCharacterFinder"
+    },
+    {
+      "language": "es",
+      "message": "Arme su tablero buscando y escogiendo sus personajes favoritos:",
+      "code": "characterFinderLabel"
+    },
+    {
+      "language": "es",
+      "message": "Nombre un personaje de Marvel Comics (ejemplo: Hulk)",
+      "code": "characterFinderPlaceholder"
+    },
+    {
+      "language": "es",
+      "message": "Comenzar una partida",
+      "code": "goToMemoryGame"
+    },
+    {
+      "language": "es",
+      "message": "Ir atrás",
+      "code": "goBack"
+    },
+    {
+      "language": "es",
+      "message": "No se encontró ningún resultado. Asegúrese que el nombre del personaje esté en inglés (ejemplo: 'Spider-Man' en lugar de 'Hombre Araña').",
+      "code": "characterFinderNoResults"
+    },
+    {
+      "language": "es",
+      "message": "Seleccione a los personajes que desee golpeando sus respectivas fotos.",
+      "code": "selectTiles"
+    },
+    {
+      "language": "es",
+      "message": "Su tablero tiene {characterCount} personaje(s) en este momento:",
+      "code": "yourBoard"
+    }
   ],
   "flipATileTranslations": [
     {
