@@ -42,12 +42,12 @@
     },
     {
       "language": "en",
-      "message": "Your board has {characterCount} characters so far:",
+      "message": "Your board has the characters below:",
       "code": "yourBoard"
     },
     {
       "language": "es",
-      "message": "Encuentre a sus personajes favoritos de Marvel Comics y arme un juego de memoria. ¿Listo para el desafio?",
+      "message": "¡Bienvenido! Encuentre a sus personajes favoritos del mundo de Marvel Comics y arme un juego de memoria. ¿Listo para el desafio?",
       "code": "appDescription"
     },
     {
@@ -57,12 +57,12 @@
     },
     {
       "language": "es",
-      "message": "Arme su tablero buscando y escogiendo sus personajes favoritos:",
+      "message": "Busque sus personajes favoritos del mundo de Marvel Comics",
       "code": "characterFinderLabel"
     },
     {
       "language": "es",
-      "message": "Nombre un personaje de Marvel Comics (ejemplo: Hulk)",
+      "message": "Escriba el nombre de un personaje (ejemplo: Hulk)",
       "code": "characterFinderPlaceholder"
     },
     {
@@ -82,12 +82,12 @@
     },
     {
       "language": "es",
-      "message": "Seleccione a los personajes que desee golpeando sus respectivas fotos.",
+      "message": "Seleccione a los personajes que desee agregar a su tablero.",
       "code": "selectTiles"
     },
     {
       "language": "es",
-      "message": "Su tablero tiene {characterCount} personaje(s) en este momento:",
+      "message": "Su tablero tiene los siguientes personajes:",
       "code": "yourBoard"
     }
   ],
@@ -181,6 +181,12 @@
       "message": "¡Excelente! Encontraste todas los cartas. La partida se acabó.",
       "type": "status",
       "code": "allTilesRevealed"
+    },
+    {
+      "language": "es",
+      "message": "Has cometido {mistakesCount} equivocaciones.",
+      "type": "statux",
+      "code": "mistakes"
     },
     {
       "language": "es",

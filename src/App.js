@@ -68,16 +68,28 @@ export default function App() {
       )}
       {screen === screens.characterFinder && (
         <div className='lg-2/3 xl:w-1/2 2xl:w-1/3'>
-          <CharacterSearchBar charactersToHide={characters.map(item => item.id)} onCharacterClick={addCharacter} helpText='Build a memory game board by selecting your favorite MCU characters:' placeholder='Find an MCU character'/>
-          <CharacterList characters={characters} onItemRemoveClick={removeCharacter} label='Your board:' />
+          <CharacterSearchBar
+            charactersToHide={characters.map(item => item.id)}
+            onCharacterClick={addCharacter}
+            placeholder={getAppTranslation('characterFinderPlaceholder')}
+            helpText={getAppTranslation('characterFinderLabel')}
+            resultsMsg={getAppTranslation('selectTiles')}
+            errorMsg={getAppTranslation('')}
+            noResultsMsg={getAppTranslation('characterFinderNoResults')}
+          />
+          <CharacterList
+            characters={characters}
+            onItemRemoveClick={removeCharacter}
+            label={getAppTranslation('yourBoard')}
+          />
           <button
             className='block w-full font-bold py-4 px-8 rounded-full bg-blue mb-4'
             onClick={() => setScreen(screens.memoryGame)}
-          >Start Game</button>
+          >{getAppTranslation('goToMemoryGame')}</button>
           <button
             className='block w-full font-bold py-4 px-8 rounded-full border'
             onClick={() => setScreen(screens.home)}
-          >Go Back</button>
+          >{getAppTranslation('goBack')}</button>
         </div>
       )}
       {screen === screens.memoryGame && (
@@ -93,7 +105,7 @@ export default function App() {
           <button
             className='block w-full font-bold py-4 px-8 rounded-full border mt-8'
             onClick={() => setScreen(screens.characterFinder)}
-          >Go Back</button>
+          >{getAppTranslation('goBack')}</button>
         </div>
       )}
     </div>
