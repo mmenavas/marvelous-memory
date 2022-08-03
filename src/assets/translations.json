@@ -37,6 +37,11 @@
     },
     {
       "language": "en",
+      "message": "We're currently experiencing network issues. Please try again later.",
+      "code": "characterFinderError"
+    },
+    {
+      "language": "en",
       "message": "Add tiles to your board by clicking on the search results below:",
       "code": "selectTiles"
     },
@@ -79,6 +84,11 @@
       "language": "es",
       "message": "No se encontró ningún resultado. Asegúrese que el nombre del personaje esté en inglés (ejemplo: 'Spider-Man' en lugar de 'Hombre Araña').",
       "code": "characterFinderNoResults"
+    },
+    {
+      "language": "es",
+      "message": "Estamos experimentando problemas con la red. Por favor intente jugar en otro momento.",
+      "code": "characterFinderError"
     },
     {
       "language": "es",

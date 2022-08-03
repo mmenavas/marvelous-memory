@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { MemoryGameBoard } from '@mmenavas/memory-game-react'
-import { MessageProvider } from '@mmenavas/memory-game-react'
+import { MemoryGameBoard, MessageProvider } from '@mmenavas/memory-game-react'
 import { CharacterSearchBar } from './components/CharacterSearchBar';
 import { CharacterList } from './components/CharacterList';
 import { Character } from './components/Character';
@@ -74,7 +73,7 @@ export default function App() {
             placeholder={getAppTranslation('characterFinderPlaceholder')}
             helpText={getAppTranslation('characterFinderLabel')}
             resultsMsg={getAppTranslation('selectTiles')}
-            errorMsg={getAppTranslation('')}
+            errorMsg={getAppTranslation('characterFinderError')}
             noResultsMsg={getAppTranslation('characterFinderNoResults')}
           />
           <CharacterList
